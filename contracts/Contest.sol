@@ -9,7 +9,7 @@ contract Contest {
 
     string public contestant;
 
-    constructor () public {
+    constructor() public {
         contestant = "Tom";
     }
 }
