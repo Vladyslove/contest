@@ -15,20 +15,26 @@ contract Contest {
     }
 
     // use mapping to get or fetch the contestant
-    mapping(uint => contestant) public contestants;
+    mapping(uint => Contestant) public contestants;
 
     // add a public variable to keep track of contestant Count
-    uint public contestantCount;
+    uint public contestantsCount;
 
-    //add a function to add contestant
-    function addContestant (string _name) private { 
-        // underscore - it for private variable, for state variable
-        // it's a convention to start pr var with '_'
-        contestantCount ++;
-        contestants[contestantsCount] = Contestant(contestantCount, _name, 0);
+    constructor () public {
+        addContestant("Tom");
+        addContestant("Jerry");
     }
 
-
+    // add a function to add contestant
+    // memory keyword required since 0.5.0 solidity breaking changes
+    // in this case fix next issue: 
+    // 'TypeError: Data location must be "storage" or "memory" for parameter in function, but none was given'
+    function addContestant (string memory _name) private { 
+        // underscore - it for private variable, for state variable
+        // it's a convention to start pr var with '_'
+        contestantsCount ++;
+        contestants[contestantsCount] = Contestant(contestantsCount, _name, 0);
+    }
 }
 
 
@@ -51,4 +57,3 @@ contract Contest {
     // constructor() public {
     //     contestant = "Tom";
     // }
-}
