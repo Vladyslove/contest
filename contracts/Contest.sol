@@ -15,9 +15,9 @@ contract Contest {
     }
 
     // use mapping to get or fetch the contestant
-    mapping(uint => Contestant) public contestants;
+    mapping(uint => Contestant) public contestants; // public state variable
 
-    // add a public variable to keep track of contestant Count
+    // add a public STATE variable to keep track of contestant Count
     uint public contestantsCount;
 
     constructor () public {
