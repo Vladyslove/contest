@@ -49,13 +49,37 @@ App = {
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
-        $("accountAddress").html("Your Account: " + account);
+        $("#accountAddress").html("Your Account: " + account);
       }
     });
 
     // Load contract data
+    App.contracts.Contest.deployed().then(function(instance){
+      contestInstance = instance;
+      return contestInstance.contestantsCount();
+    }).then(function(contestantsCount){
+      var contestantsResults = $("#contestantsResults");
+      contestantsResults.empty();
 
-  }
+      for (var i = 1; i <= contestantsCount; i++) {
+        contestInstance.contestants(i).then(function(contestan){
+          var id = contestant[0];
+          var name = contestant[1];
+          var voteCount = contestant[2];
+
+          // Render contestant Result
+          var contestantTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td><tr>"
+          contestantsResults.append(contestantTemplate);
+        });
+      }
+
+      loader.hide();
+      content.show();
+    }).catch(function(error) {
+      console.warn(error);
+    });
+  };
+
 
 };
 
