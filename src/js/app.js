@@ -1,62 +1,60 @@
 App = {
   web3Provider: null,
   contracts: {},
+  account: 0x0 ,
 
   init: async function() {
-    // Load pets.
-    $.getJSON('../pets.json', function(data) {
-      var petsRow = $('#petsRow');
-      var petTemplate = $('#petTemplate');
-
-      for (i = 0; i < data.length; i ++) {
-        petTemplate.find('.panel-title').text(data[i].name);
-        petTemplate.find('img').attr('src', data[i].picture);
-        petTemplate.find('.pet-breed').text(data[i].breed);
-        petTemplate.find('.pet-age').text(data[i].age);
-        petTemplate.find('.pet-location').text(data[i].location);
-        petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
-
-        petsRow.append(petTemplate.html());
-      }
-    });
-
     return await App.initWeb3();
   },
 
-  initWeb3: async function() {
-    /*
-     * Replace me...
+   /*
+     * Exact duty of this function is  to have a connection beetween
+     * our web application (in browser, rendered index.html) 
+     * to the blockchain (ganache was shown) running inside the system 
      */
+  initWeb3: async function() {
+    if (typeof web3 !== 'undefined') {
+        // If a web3 instance is already provided by Meta Mask
+        App.web3Provider = web3.currentProvider;
+        web3 = new Web3(web3.currentProvider);
+    } else {
+        // Specify default instance if no web3 instance provided
+        App.web3Provider = new Web3.provider.HttpProvider('http://localhost:7545');
+        web3 = new Web3(App.web3Provider);
+    }
 
     return App.initContract();
   },
 
   initContract: function() {
-    /*
-     * Replace me...
-     */
+    $.getJSON("Contest.json", function(contest) {
+      // Instantiate a new truffle contract from the artifact
+      App.contracts.Contest = TruffleContract(contest);
+      // Connect provider to interact with contract
+      App.contracts.Contest.setProvider(App.web3Provider);
+    })
 
-    return App.bindEvents();
-  },
+    return App.render();
+  }, 
 
-  bindEvents: function() {
-    $(document).on('click', '.btn-adopt', App.handleAdopt);
-  },
+  render: function() {
+    var contestInstance;
+    var loader = $("#loader");
+    var content = $("#content");
 
-  markAdopted: function() {
-    /*
-     * Replace me...
-     */
-  },
+    loader.show();
+    content.hide();
 
-  handleAdopt: function(event) {
-    event.preventDefault();
+    // Load account data
+    web3.eth.getCoinbase(function(err, account) {
+      if (err === null) {
+        App.account = account;
+        $("accountAddress").html("Your Account: " + account);
+      }
+    });
 
-    var petId = parseInt($(event.target).data('id'));
+    // Load contract data
 
-    /*
-     * Replace me...
-     */
   }
 
 };
