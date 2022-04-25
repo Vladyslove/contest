@@ -62,6 +62,9 @@ App = {
       var contestantsResults = $("#contestantsResults");
       contestantsResults.empty();
 
+      var contestantsSelect = $("#contestantsSelect");
+      contestantsSelect.empty();
+
       for (var i = 1; i <= contestantsCount; i++) {
         contestInstance.contestants(i).then(function(contestant){
           var id = contestant[0];
@@ -71,6 +74,10 @@ App = {
           // Render contestant Result
           var contestantTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
           contestantsResults.append(contestantTemplate);
+
+          // Render candidtae voting option
+          var contestantOption = "<option value='" + id + "' >" + name + "</ option"
+          contestantsSelect.append(contestantOption);
         });
       }
 
