@@ -40,7 +40,17 @@ contract Contest {
     }
 
     function vote (uint _contestantId) public {
+
+        // restricting the person who already casted the vote
+        require(!voters[msg.sender]); 
+        
+        // require that the vote is casted to a valid contestant
+        require(_contestantId > 0 && _contestantId  <= contestantsCount);
+        // increase the contestant vote count
+
         contestants[_contestantId].voteCount ++;
+
+        // set the voter's voted status to true
         voters[msg.sender] = true;   
     }
 }

@@ -48,6 +48,7 @@ App = {
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
+        // web3.eth.getAccounts().then (function(accounts) {Account1st = accounts[0] });
         App.account = account;
         $("#accountAddress").html("Your Account: " + account);
       }
