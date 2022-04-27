@@ -62,7 +62,7 @@ App = {
       var contestantsResults = $("#contestantsResults");
       contestantsResults.empty();
 
-      var contestantsSelect = $("#contestantsSelect");
+      var contestantsSelect = $('#contestantsSelect');
       contestantsSelect.empty();
 
       for (var i = 1; i <= contestantsCount; i++) {
@@ -75,8 +75,8 @@ App = {
           var contestantTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
           contestantsResults.append(contestantTemplate);
 
-          // Render candidtae voting option
-          var contestantOption = "<option value='" + id + "' >" + name + "</ option"
+          // Render candidate voting option
+          var contestantOption = "<option value='" + id + "' >" + name + "</ option>"
           contestantsSelect.append(contestantOption);
         });
       }
@@ -86,8 +86,21 @@ App = {
     }).catch(function(error) {
       console.warn(error);
     });
-  }
+  },
 
+    castVote: function() {
+    var contestantId = $('#contestantsSelect').val();
+    App.contracts.Contest.deployed().then(function(instance) {
+      return instance.vote(contestantId, { from: App.account });
+    }).then(function(result) {
+      // Wait for votes to update
+      $("#content").hide();
+      $("#loader").show();
+    }).catch(function(err) {
+      console.error(err);
+      console.log("Account address is: " + App.account);
+    });
+  }
 
 };
 

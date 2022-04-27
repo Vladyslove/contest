@@ -23,6 +23,10 @@ contract Contest {
     // add a public STATE variable to keep track of contestant Count
     uint public contestantsCount;
 
+    event votedEvent(
+        uint indexed _contestantId
+    );
+
     constructor () public {
         addContestant("Tom");
         addContestant("Jerry");
@@ -30,9 +34,9 @@ contract Contest {
 
     // add a function to add contestant
     // memory keyword required since 0.5.0 solidity breaking changes
-    // in this case fix next issue: 
+    // in this case fix next issue:
     // 'TypeError: Data location must be "storage" or "memory" for parameter in function, but none was given'
-    function addContestant (string memory _name) private { 
+    function addContestant (string memory _name) private {
         // underscore - it for private variable, for state variable
         // it's a convention to start pr var with '_'
         contestantsCount ++;
@@ -42,8 +46,8 @@ contract Contest {
     function vote (uint _contestantId) public {
 
         // restricting the person who already casted the vote
-        require(!voters[msg.sender]); 
-        
+        require(!voters[msg.sender]);
+
         // require that the vote is casted to a valid contestant
         require(_contestantId > 0 && _contestantId  <= contestantsCount);
         // increase the contestant vote count
@@ -51,6 +55,9 @@ contract Contest {
         contestants[_contestantId].voteCount ++;
 
         // set the voter's voted status to true
-        voters[msg.sender] = true;   
+        voters[msg.sender] = true;
+
+        //trigger the votedEvent(_contestantId);
+        emit votedEvent(_contestantId);
     }
 }
