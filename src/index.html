@@ -50,6 +50,16 @@
               <!-- This content will be fetched dynamically -->
           </tbody>
         </table>
+
+        <form onSubmit="App.castVote(); return false;">
+          <div class="form-group">
+            <label for="contestantsSelect">Select Contestant</label>
+            <select class="select-control" id="contestantsSelect">
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Cast your Vote</button>
+        </form>
+
       </div>
 
     </div>
