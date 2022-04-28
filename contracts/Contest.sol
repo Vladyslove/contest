@@ -17,6 +17,9 @@ contract Contest {
     // use mapping to get or fetch the contestant
     mapping(uint => Contestant) public contestants; // public state variable
 
+    // to save the list of users/accounts who already casted vote
+    mapping (address => bool) public voters;
+
     // add a public STATE variable to keep track of contestant Count
     uint public contestantsCount;
 
@@ -27,33 +30,17 @@ contract Contest {
 
     // add a function to add contestant
     // memory keyword required since 0.5.0 solidity breaking changes
-    // in this case fix next issue: 
+    // in this case fix next issue:
     // 'TypeError: Data location must be "storage" or "memory" for parameter in function, but none was given'
-    function addContestant (string memory _name) private { 
+    function addContestant (string memory _name) private {
         // underscore - it for private variable, for state variable
         // it's a convention to start pr var with '_'
         contestantsCount ++;
         contestants[contestantsCount] = Contestant(contestantsCount, _name, 0);
     }
+
+    function vote (uint _contestantId) public {
+        contestants[_contestantId].voteCount ++;
+        voters[msg.sender] = true;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // string public contestant;
-
-    // constructor() public {
-    //     contestant = "Tom";
-    // }
