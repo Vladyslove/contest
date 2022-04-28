@@ -9,17 +9,17 @@ App = {
 
    /*
      * Exact duty of this function is  to have a connection beetween
-     * our web application (in browser, rendered index.html) 
-     * to the blockchain (ganache was shown) running inside the system 
+     * our web application (in browser, rendered index.html)
+     * to the blockchain (ganache was shown) running inside the system
      */
   initWeb3: async function() {
     if (typeof web3 !== 'undefined') {
         // If a web3 instance is already provided by Meta Mask
-        App.web3Provider = web3.currentProvider;
-        web3 = new Web3(web3.currentProvider);
+        App.web3Provider = window.ethereum;
+        web3 = new Web3(window.ethereum);
     } else {
         // Specify default instance if no web3 instance provided
-        App.web3Provider = new Web3.provider.HttpProvider('http://localhost:7545');
+        App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
         web3 = new Web3(App.web3Provider);
     }
 
@@ -32,10 +32,10 @@ App = {
       App.contracts.Contest = TruffleContract(contest);
       // Connect provider to interact with contract
       App.contracts.Contest.setProvider(App.web3Provider);
-    })
 
     return App.render();
-  }, 
+    });
+  },
 
   render: function() {
     var contestInstance;
@@ -62,13 +62,13 @@ App = {
       contestantsResults.empty();
 
       for (var i = 1; i <= contestantsCount; i++) {
-        contestInstance.contestants(i).then(function(contestan){
+        contestInstance.contestants(i).then(function(contestant){
           var id = contestant[0];
           var name = contestant[1];
           var voteCount = contestant[2];
 
           // Render contestant Result
-          var contestantTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td><tr>"
+          var contestantTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
           contestantsResults.append(contestantTemplate);
         });
       }
@@ -78,7 +78,7 @@ App = {
     }).catch(function(error) {
       console.warn(error);
     });
-  };
+  }
 
 
 };
