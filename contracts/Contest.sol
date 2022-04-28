@@ -23,6 +23,10 @@ contract Contest {
     // add a public STATE variable to keep track of contestant Count
     uint public contestantsCount;
 
+    event votedEvent(
+        uint indexed _contestantId
+    );
+
     constructor () public {
         addContestant("Tom");
         addContestant("Jerry");
