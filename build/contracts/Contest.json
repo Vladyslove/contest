@@ -103,21 +103,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_contestantId\",\"type\":\"uint256\"}],\"name\":\"votedEvent\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"contestants\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"contestantsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_contestantId\",\"type\":\"uint256\"}],\"name\":\"vote\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"voters\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"The Contest contract does this and that...\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Contest.sol\":\"Contest\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Contest.sol\":{\"keccak256\":\"0x7a6b2813332130600f2a3ad8096b43cfcc34e08e631644b8e3242bd028cd7f90\",\"urls\":[\"bzz-raw://64003d2bb7752fa1c327c8b5a2ccb2c0fb83d17692ef75d61930fc8a6b98b998\",\"dweb:/ipfs/QmbNqNf8q2KBn9RkH65tCxXgPoJ2J6ksH7BkhCNgL4HwiT\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506100556040518060400160405280600381526020017f546f6d000000000000000000000000000000000000000000000000000000000081525061009e60201b60201c565b6100996040518060400160405280600581526020017f4a6572727900000000000000000000000000000000000000000000000000000081525061009e60201b60201c565b6101be565b6002600081548092919060010191905055506040518060600160405280600254815260200182815260200160008152506000806002548152602001908152602001600020600082015181600001556020820151816001019080519060200190610108929190610119565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061015a57805160ff1916838001178555610188565b82800160010185558215610188579182015b8281111561018757825182559160200191906001019061016c565b5b5090506101959190610199565b5090565b6101bb91905b808211156101b757600081600090555060010161019f565b5090565b90565b6103bc806101cd6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630121b93f14610051578063a3ec138d1461007f578063dfd50f52146100db578063ec63d1c814610190575b600080fd5b61007d6004803603602081101561006757600080fd5b81019080803590602001909291905050506101ae565b005b6100c16004803603602081101561009557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061029f565b604051808215151515815260200191505060405180910390f35b610107600480360360208110156100f157600080fd5b81019080803590602001909291905050506102bf565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610153578082015181840152602081019050610138565b50505050905090810190601f1680156101805780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b610198610381565b6040518082815260200191505060405180910390f35b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561020557600080fd5b60008111801561021757506002548111155b61022057600080fd5b6000808281526020019081526020016000206002016000815480929190600101919050555060018060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103715780601f1061034657610100808354040283529160200191610371565b820191906000526020600020905b81548152906001019060200180831161035457829003601f168201915b5050505050908060020154905083565b6002548156fea265627a7a7231582083376feefb94180e0e14d6c8cd106809b90bc743f18bf5f7d10ea938cd2231a864736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80630121b93f14610051578063a3ec138d1461007f578063dfd50f52146100db578063ec63d1c814610190575b600080fd5b61007d6004803603602081101561006757600080fd5b81019080803590602001909291905050506101ae565b005b6100c16004803603602081101561009557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061029f565b604051808215151515815260200191505060405180910390f35b610107600480360360208110156100f157600080fd5b81019080803590602001909291905050506102bf565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610153578082015181840152602081019050610138565b50505050905090810190601f1680156101805780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b610198610381565b6040518082815260200191505060405180910390f35b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561020557600080fd5b60008111801561021757506002548111155b61022057600080fd5b6000808281526020019081526020016000206002016000815480929190600101919050555060018060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103715780601f1061034657610100808354040283529160200191610371565b820191906000526020600020905b81548152906001019060200180831161035457829003601f168201915b5050505050908060020154905083565b6002548156fea265627a7a7231582083376feefb94180e0e14d6c8cd106809b90bc743f18bf5f7d10ea938cd2231a864736f6c63430005100032",
-  "sourceMap": "149:1781:0:-;;;743:91;8:9:-1;5:2;;;30:1;27;20:12;5:2;743:91:0;775:20;;;;;;;;;;;;;;;;;;:13;;;:20;;:::i;:::-;805:22;;;;;;;;;;;;;;;;;;:13;;;:22;;:::i;:::-;149:1781;;1095:291;1280:16;;:19;;;;;;;;;;;;;1341:38;;;;;;;;1352:16;;1341:38;;;;1370:5;1341:38;;;;1377:1;1341:38;;;1309:11;:29;1321:16;;1309:29;;;;;;;;;;;:70;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;1095:291;:::o;149:1781::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "149:1781:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:1781:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1392:536;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1392:536:0;;;;;;;;;;;;;;;;;:::i;:::-;;528:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;528:39:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;384:46;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;384:46:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;384:46:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;643:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1392:536;1516:6;:18;1523:10;1516:18;;;;;;;;;;;;;;;;;;;;;;;;;1515:19;1507:28;;;;;;1701:1;1685:13;:17;:55;;;;;1724:16;;1706:13;:34;;1685:55;1677:64;;;;;;1798:11;:26;1810:13;1798:26;;;;;;;;;;;:36;;;:39;;;;;;;;;;;;;1917:4;1896:6;:18;1903:10;1896:18;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;1392:536;:::o;528:39::-;;;;;;;;;;;;;;;;;;;;;;:::o;384:46::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;643:28::-;;;;:::o",
-  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.4.22 <0.9.0;\n\n// creating the contract\n/**\n * The Contest contract does this and that...\n */\ncontract Contest {\n\n    // creating structure to model the contestant\n    struct Contestant { // close to array\n        uint id;\n        string name;\n        uint voteCount;\n    }\n\n    // use mapping to get or fetch the contestant\n    mapping(uint => Contestant) public contestants; // public state variable\n\n    // to save the list of users/accounts who already casted vote\n    mapping (address => bool) public voters;\n\n    // add a public STATE variable to keep track of contestant Count\n    uint public contestantsCount;\n\n    event votedEvent(\n        uint indexed _contestantId\n    );\n\n    constructor () public {\n        addContestant(\"Tom\");\n        addContestant(\"Jerry\");\n    }\n\n    // add a function to add contestant\n    // memory keyword required since 0.5.0 solidity breaking changes\n    // in this case fix next issue:\n    // 'TypeError: Data location must be \"storage\" or \"memory\" for parameter in function, but none was given'\n    function addContestant (string memory _name) private {\n        // underscore - it for private variable, for state variable\n        // it's a convention to start pr var with '_'\n        contestantsCount ++;\n        contestants[contestantsCount] = Contestant(contestantsCount, _name, 0);\n    }\n\n    function vote (uint _contestantId) public {\n\n        // restricting the person who already casted the vote\n        require(!voters[msg.sender]); // function execution goes if true, stops/throw an error if false\n\n        // require that the vote is casted to a valid contestant\n        require(_contestantId > 0 && _contestantId  <= contestantsCount);\n        // increase the contestant vote count\n\n        contestants[_contestantId].voteCount ++;\n\n        // set the voter's voted status to true\n        voters[msg.sender] = true;\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_contestantId\",\"type\":\"uint256\"}],\"name\":\"votedEvent\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"contestants\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"contestantsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_contestantId\",\"type\":\"uint256\"}],\"name\":\"vote\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"voters\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"The Contest contract does this and that...\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Contest.sol\":\"Contest\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Contest.sol\":{\"keccak256\":\"0x60660a869eeada85981356431c5918e863bc5694c79e370b48afc9c393c43f1e\",\"urls\":[\"bzz-raw://f4a704a310e16a2fbffb347fab1298dbc6aefaebb059f14e511641caefac2ee6\",\"dweb:/ipfs/QmTFMrUXna2x8yDZoGxTvbUxtKBzsbip9N2YdYWNWE5N3e\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100556040518060400160405280600381526020017f546f6d000000000000000000000000000000000000000000000000000000000081525061009e60201b60201c565b6100996040518060400160405280600581526020017f4a6572727900000000000000000000000000000000000000000000000000000081525061009e60201b60201c565b6101be565b6002600081548092919060010191905055506040518060600160405280600254815260200182815260200160008152506000806002548152602001908152602001600020600082015181600001556020820151816001019080519060200190610108929190610119565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061015a57805160ff1916838001178555610188565b82800160010185558215610188579182015b8281111561018757825182559160200191906001019061016c565b5b5090506101959190610199565b5090565b6101bb91905b808211156101b757600081600090555060010161019f565b5090565b90565b6103e9806101cd6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630121b93f14610051578063a3ec138d1461007f578063dfd50f52146100db578063ec63d1c814610190575b600080fd5b61007d6004803603602081101561006757600080fd5b81019080803590602001909291905050506101ae565b005b6100c16004803603602081101561009557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102cc565b604051808215151515815260200191505060405180910390f35b610107600480360360208110156100f157600080fd5b81019080803590602001909291905050506102ec565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610153578082015181840152602081019050610138565b50505050905090810190601f1680156101805780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101986103ae565b6040518082815260200191505060405180910390f35b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561020557600080fd5b60008111801561021757506002548111155b61022057600080fd5b6000808281526020019081526020016000206002016000815480929190600101919050555060018060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550807ffff3c900d938d21d0990d786e819f29b8d05c1ef587b462b939609625b684b1660405160405180910390a250565b60016020528060005260406000206000915054906101000a900460ff1681565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561039e5780601f106103735761010080835404028352916020019161039e565b820191906000526020600020905b81548152906001019060200180831161038157829003601f168201915b5050505050908060020154905083565b6002548156fea265627a7a72315820565388b7ba894df2aae8f1af3c8444737d83419ba36c938ed48f3242dd3921c964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80630121b93f14610051578063a3ec138d1461007f578063dfd50f52146100db578063ec63d1c814610190575b600080fd5b61007d6004803603602081101561006757600080fd5b81019080803590602001909291905050506101ae565b005b6100c16004803603602081101561009557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102cc565b604051808215151515815260200191505060405180910390f35b610107600480360360208110156100f157600080fd5b81019080803590602001909291905050506102ec565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610153578082015181840152602081019050610138565b50505050905090810190601f1680156101805780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101986103ae565b6040518082815260200191505060405180910390f35b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561020557600080fd5b60008111801561021757506002548111155b61022057600080fd5b6000808281526020019081526020016000206002016000815480929190600101919050555060018060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550807ffff3c900d938d21d0990d786e819f29b8d05c1ef587b462b939609625b684b1660405160405180910390a250565b60016020528060005260406000206000915054906101000a900460ff1681565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561039e5780601f106103735761010080835404028352916020019161039e565b820191906000526020600020905b81548152906001019060200180831161038157829003601f168201915b5050505050908060020154905083565b6002548156fea265627a7a72315820565388b7ba894df2aae8f1af3c8444737d83419ba36c938ed48f3242dd3921c964736f6c63430005100032",
+  "sourceMap": "149:1843:0:-;;;743:91;8:9:-1;5:2;;;30:1;27;20:12;5:2;743:91:0;775:20;;;;;;;;;;;;;;;;;;:13;;;:20;;:::i;:::-;805:22;;;;;;;;;;;;;;;;;;:13;;;:22;;:::i;:::-;149:1843;;1095:291;1280:16;;:19;;;;;;;;;;;;;1341:38;;;;;;;;1352:16;;1341:38;;;;1370:5;1341:38;;;;1377:1;1341:38;;;1309:11;:29;1321:16;;1309:29;;;;;;;;;;;:70;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;1095:291;:::o;149:1843::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "149:1843:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:1843:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1392:598;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1392:598:0;;;;;;;;;;;;;;;;;:::i;:::-;;528:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;528:39:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;384:46;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;384:46:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;384:46:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;643:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1392:598;1516:6;:18;1523:10;1516:18;;;;;;;;;;;;;;;;;;;;;;;;;1515:19;1507:28;;;;;;1701:1;1685:13;:17;:55;;;;;1724:16;;1706:13;:34;;1685:55;1677:64;;;;;;1798:11;:26;1810:13;1798:26;;;;;;;;;;;:36;;;:39;;;;;;;;;;;;;1917:4;1896:6;:18;1903:10;1896:18;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;1969:13;1958:25;;;;;;;;;;1392:598;:::o;528:39::-;;;;;;;;;;;;;;;;;;;;;;:::o;384:46::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;643:28::-;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.4.22 <0.9.0;\n\n// creating the contract\n/**\n * The Contest contract does this and that...\n */\ncontract Contest {\n\n    // creating structure to model the contestant\n    struct Contestant { // close to array\n        uint id;\n        string name;\n        uint voteCount;\n    }\n\n    // use mapping to get or fetch the contestant\n    mapping(uint => Contestant) public contestants; // public state variable\n\n    // to save the list of users/accounts who already casted vote\n    mapping (address => bool) public voters;\n\n    // add a public STATE variable to keep track of contestant Count\n    uint public contestantsCount;\n\n    event votedEvent(\n        uint indexed _contestantId\n    );\n\n    constructor () public {\n        addContestant(\"Tom\");\n        addContestant(\"Jerry\");\n    }\n\n    // add a function to add contestant\n    // memory keyword required since 0.5.0 solidity breaking changes\n    // in this case fix next issue:\n    // 'TypeError: Data location must be \"storage\" or \"memory\" for parameter in function, but none was given'\n    function addContestant (string memory _name) private {\n        // underscore - it for private variable, for state variable\n        // it's a convention to start pr var with '_'\n        contestantsCount ++;\n        contestants[contestantsCount] = Contestant(contestantsCount, _name, 0);\n    }\n\n    function vote (uint _contestantId) public {\n\n        // restricting the person who already casted the vote\n        require(!voters[msg.sender]); // function execution goes if true, stops/throw an error if false\n\n        // require that the vote is casted to a valid contestant\n        require(_contestantId > 0 && _contestantId  <= contestantsCount);\n        // increase the contestant vote count\n\n        contestants[_contestantId].voteCount ++;\n\n        // set the voter's voted status to true\n        voters[msg.sender] = true;\n\n\t\t//trigger the vote event\n\t\temit votedEvent(_contestantId);\n    }\n}\n",
   "sourcePath": "/home/FINTECHINNOVATION.LAN/vstepanov/sublime/contest/contracts/Contest.sol",
   "ast": {
     "absolutePath": "project:/contracts/Contest.sol",
     "exportedSymbols": {
       "Contest": [
-        91
+        95
       ]
     },
-    "id": 92,
+    "id": 96,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -140,9 +140,9 @@
         "contractKind": "contract",
         "documentation": "The Contest contract does this and that...",
         "fullyImplemented": true,
-        "id": 91,
+        "id": 95,
         "linearizedBaseContracts": [
-          91
+          95
         ],
         "name": "Contest",
         "nodeType": "ContractDefinition",
@@ -232,7 +232,7 @@
             ],
             "name": "Contestant",
             "nodeType": "StructDefinition",
-            "scope": 91,
+            "scope": 95,
             "src": "223:105:0",
             "visibility": "public"
           },
@@ -241,7 +241,7 @@
             "id": 12,
             "name": "contestants",
             "nodeType": "VariableDeclaration",
-            "scope": 91,
+            "scope": 95,
             "src": "384:46:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -288,7 +288,7 @@
             "id": 16,
             "name": "voters",
             "nodeType": "VariableDeclaration",
-            "scope": 91,
+            "scope": 95,
             "src": "528:39:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -333,7 +333,7 @@
             "id": 18,
             "name": "contestantsCount",
             "nodeType": "VariableDeclaration",
-            "scope": 91,
+            "scope": 95,
             "src": "643:28:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -541,7 +541,7 @@
               "parameters": [],
               "src": "765:0:0"
             },
-            "scope": 91,
+            "scope": 95,
             "src": "743:91:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -783,7 +783,7 @@
               "parameters": [],
               "src": "1148:0:0"
             },
-            "scope": 91,
+            "scope": 95,
             "src": "1095:291:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -791,9 +791,9 @@
           },
           {
             "body": {
-              "id": 89,
+              "id": 93,
               "nodeType": "Block",
-              "src": "1434:494:0",
+              "src": "1434:556:0",
               "statements": [
                 {
                   "expression": {
@@ -834,7 +834,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 106,
+                              "referencedDeclaration": 110,
                               "src": "1523:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -883,10 +883,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        109,
-                        110
+                        113,
+                        114
                       ],
-                      "referencedDeclaration": 109,
+                      "referencedDeclaration": 113,
                       "src": "1507:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1041,10 +1041,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        109,
-                        110
+                        113,
+                        114
                       ],
-                      "referencedDeclaration": 109,
+                      "referencedDeclaration": 113,
                       "src": "1677:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1178,7 +1178,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 106,
+                          "referencedDeclaration": 110,
                           "src": "1903:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1239,11 +1239,65 @@
                   "id": 88,
                   "nodeType": "ExpressionStatement",
                   "src": "1896:25:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 90,
+                        "name": "_contestantId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "1969:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 89,
+                      "name": "votedEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22,
+                      "src": "1958:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1958:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 92,
+                  "nodeType": "EmitStatement",
+                  "src": "1953:30:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 90,
+            "id": 94,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1258,7 +1312,7 @@
                   "id": 55,
                   "name": "_contestantId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 90,
+                  "scope": 94,
                   "src": "1407:18:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1288,25 +1342,25 @@
               "parameters": [],
               "src": "1434:0:0"
             },
-            "scope": 91,
-            "src": "1392:536:0",
+            "scope": 95,
+            "src": "1392:598:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 92,
-        "src": "149:1781:0"
+        "scope": 96,
+        "src": "149:1843:0"
       }
     ],
-    "src": "36:1895:0"
+    "src": "36:1957:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/Contest.sol",
       "exportedSymbols": {
         "Contest": [
-          91
+          95
         ]
       }
     },
@@ -1339,17 +1393,17 @@
           "documentation": "The Contest contract does this and that...",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            91
+            95
           ],
           "name": "Contest",
-          "scope": 92
+          "scope": 96
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "Contest.Contestant",
               "name": "Contestant",
-              "scope": 91,
+              "scope": 95,
               "visibility": "public"
             },
             "children": [
@@ -1440,7 +1494,7 @@
             "attributes": {
               "constant": false,
               "name": "contestants",
-              "scope": 91,
+              "scope": 95,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => struct Contest.Contestant)",
@@ -1487,7 +1541,7 @@
             "attributes": {
               "constant": false,
               "name": "voters",
-              "scope": 91,
+              "scope": 95,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => bool)",
@@ -1532,7 +1586,7 @@
             "attributes": {
               "constant": false,
               "name": "contestantsCount",
-              "scope": 91,
+              "scope": 95,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1610,7 +1664,7 @@
                 null
               ],
               "name": "",
-              "scope": 91,
+              "scope": 95,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1786,7 +1840,7 @@
                 null
               ],
               "name": "addContestant",
-              "scope": 91,
+              "scope": 95,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "private"
@@ -2054,7 +2108,7 @@
                 null
               ],
               "name": "vote",
-              "scope": 91,
+              "scope": 95,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2066,7 +2120,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_contestantId",
-                      "scope": 90,
+                      "scope": 94,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2132,10 +2186,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                109,
-                                110
+                                113,
+                                114
                               ],
-                              "referencedDeclaration": 109,
+                              "referencedDeclaration": 113,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2197,7 +2251,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 106,
+                                          "referencedDeclaration": 110,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -2256,10 +2310,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                109,
-                                110
+                                113,
+                                114
                               ],
-                              "referencedDeclaration": 109,
+                              "referencedDeclaration": 113,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2535,7 +2589,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 106,
+                                      "referencedDeclaration": 110,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2579,26 +2633,86 @@
                     "id": 88,
                     "name": "ExpressionStatement",
                     "src": "1896:25:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 22,
+                              "type": "function (uint256)",
+                              "value": "votedEvent"
+                            },
+                            "id": 89,
+                            "name": "Identifier",
+                            "src": "1958:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 55,
+                              "type": "uint256",
+                              "value": "_contestantId"
+                            },
+                            "id": 90,
+                            "name": "Identifier",
+                            "src": "1969:13:0"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "FunctionCall",
+                        "src": "1958:25:0"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "EmitStatement",
+                    "src": "1953:30:0"
                   }
                 ],
-                "id": 89,
+                "id": 93,
                 "name": "Block",
-                "src": "1434:494:0"
+                "src": "1434:556:0"
               }
             ],
-            "id": 90,
+            "id": 94,
             "name": "FunctionDefinition",
-            "src": "1392:536:0"
+            "src": "1392:598:0"
           }
         ],
-        "id": 91,
+        "id": 95,
         "name": "ContractDefinition",
-        "src": "149:1781:0"
+        "src": "149:1843:0"
       }
     ],
-    "id": 92,
+    "id": 96,
     "name": "SourceUnit",
-    "src": "36:1895:0"
+    "src": "36:1957:0"
   },
   "compiler": {
     "name": "solc",
@@ -2608,12 +2722,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x5a384b0A1C9dD01C23CA83E33A7a7F675FCDBCd8",
-      "transactionHash": "0x68fc6c34203029925e16f1b3dda54010e5623638bf6f9f7baf64bf822a54b74f"
+      "address": "0xdd233b13f433691CD33009d10DEd35F95B2c8a7a",
+      "transactionHash": "0x44fc7f653159398eb742b254d79154a2b1cb691c20f8a8456a09722fbac84552"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-04-28T18:36:13.046Z",
+  "updatedAt": "2022-04-28T18:48:58.429Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

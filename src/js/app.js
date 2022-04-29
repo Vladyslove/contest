@@ -33,7 +33,22 @@ App = {
       // Connect provider to interact with contract
       App.contracts.Contest.setProvider(App.web3Provider);
 
-    return App.render();
+      App.listenForEvents();
+      return App.render();
+    });
+  },
+
+  // Listen for events emitted from the contract
+  listenForEvents: function() {
+    App.contracts.Contest.deployed().then(function(instance) {
+      instance.votedEvent({}, {
+        fromBlock: 0,
+        toBlock: 'latest'
+      }).watch(function(error, event) {
+        console.log("event triggered", event)
+        // Reload when a new vote is recorded
+        App.render();
+      });
     });
   },
 
@@ -75,7 +90,7 @@ App = {
           contestantsResults.append(contestantTemplate);
 
           // Render candidate voting option
-          var contestantOption = "<option value='" + id + "' >" + name + "</ option"
+          var contestantOption = "<option value='" + id + "' >" + name + "</ option>"
           contestantsSelect.append(contestantOption);
         });
       }

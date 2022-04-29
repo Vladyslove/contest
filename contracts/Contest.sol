@@ -56,5 +56,8 @@ contract Contest {
 
         // set the voter's voted status to true
         voters[msg.sender] = true;
+
+		//trigger the vote event
+		emit votedEvent(_contestantId);
     }
 }
